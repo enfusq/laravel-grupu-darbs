@@ -12,3 +12,5 @@ Route::get('/products/{product}/show', [ProductController::class, 'show'])->name
 Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
 Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
 Route::patch('/products/{product}', [ProductController::class, 'update'])->name('products.update');
+
+Route::get('/tags/search', [TagController::class, 'search'])->name('tags.search');
