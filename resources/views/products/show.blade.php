@@ -28,7 +28,9 @@
 
 
     </form>
-    <input type="text" id="tag-input" placeholder="Add new tag..." autocomplete="off">
+    <div>
+        <input type="text" id="tag-input" placeholder="Add new tag..." autocomplete="off">
+    </div>
     <ul id="list"></ul>
     <input type="hidden" name="tags" id="tags-hidden">
 </x-layout>

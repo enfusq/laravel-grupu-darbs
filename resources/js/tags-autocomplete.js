@@ -30,11 +30,35 @@ document.addEventListener("DOMContentLoaded", function (){
             data.forEach((tag) => {
                 const listItem = document.createElement('li');
                 listItem.textContent = tag;
+                listItem.addEventListener("click", function() {
+                    addTag(tag);
+                    hideSuggestion();
+                })
                 const item = document.createElement('span');
                 autocompleteList.appendChild(listItem);
             });
         }
         tagInput.parentElement.appendChild(autocompleteList);
+    }
+
+    function addTag(tag){
+        const listItem = document.createElement('li');
+
+        const tagText = document.createElement("span");
+        tagText.textContent = tag;
+
+        const remoteButton = document.createElement("button");
+        remoteButton.textContent = "x";
+
+        listItem.appendChild(tagText);
+        listItem.appendChild(remoteButton);
+
+        tagList.appendChild(listItem);
+
+        remoteButton.addEventListener("click", () => {
+            listItem.remove();
+        });
+        tagInput.value = "";
     }
     function hideSuggestion(){
         const existSuggestion = document.querySelector('.autocomplete-suggestion');
