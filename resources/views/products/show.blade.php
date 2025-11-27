@@ -26,8 +26,9 @@
         <h3>Tags</h3>
         <div id="tag-container"></div>
 
-        <input type="text" id="tag-input" placeholder="Add new tag..." autocomplete="off">
-        <ul id="autocomplete-list"></ul>
-        <input type="hidden" name="tags" id="tags-hidden">
+
     </form>
+    <input type="text" id="tag-input" placeholder="Add new tag..." autocomplete="off">
+    <ul id="list"></ul>
+    <input type="hidden" name="tags" id="tags-hidden">
 </x-layout>
