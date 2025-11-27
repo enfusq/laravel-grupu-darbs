@@ -14,3 +14,4 @@ Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name
 Route::patch('/products/{product}', [ProductController::class, 'update'])->name('products.update');
 
 Route::get('/tags/search', [TagController::class, 'search'])->name('tags.search');
+Route::post('/tags/{product}', [TagController::class, 'addTags'])->name('tags.addTags');
